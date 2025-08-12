@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+
+
+/* Custom base styles */
+
+:root {
+  --font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Colors */
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+  --text-light: #213547;
+  --text-dark: rgba(255, 255, 255, 0.87);
+  --accent: #646cff;
+}
+
+/* Apply global font */
+html {
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base body styles */
+/* body {
+  @apply min-h-screen m-0 flex items-center justify-center bg-white text-gray-900 dark:bg-neutral-900 dark:text-white;
+} */
+
+/* Headings */
+/* h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold leading-tight text-gray-900 dark:text-white;
+} */
+
+/* h1 {
+  @apply text-4xl md:text-5xl;
+} */
+
+/* Links */
+/* a {
+  @apply font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200;
+} */
+
+/* Buttons */
+/* button {
+  @apply rounded-md px-4 py-2 text-base font-medium border border-transparent bg-neutral-900 text-white hover:border-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2;
+} */
+
+/* Responsive utilities */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+} */
+
+/* Accessibility improvement */
+/* :focus-visible {
+  outline: 2px dashed #646cff;
+  outline-offset: 2px;
+} */
