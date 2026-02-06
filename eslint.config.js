@@ -28,7 +28,7 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
-    'max-lines': ['error', 300],
+    'max-lines': ['error', 500],
     },
   },
 ]

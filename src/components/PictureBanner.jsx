@@ -1,62 +1,56 @@
 import React from 'react';
 import bannerTemplate from '../assets/2_2.jpg';
 import bannerTemplate2 from '../assets/2_2.1.jpg';
+
 const PictureBanner = () => {
+  const BannerCard = ({ image, title, discount, offerText, cta }) => (
+    <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 bg-slate-100 dark:bg-slate-800 flex items-center justify-end">
+      {/* Background Image */}
+      <img
+        src={image}
+        alt={title}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Overlay Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent dark:from-slate-900/90 dark:via-slate-900/70"></div>
+
+      {/* Content */}
+      <div className="relative z-10 mr-6 md:mr-12 text-right">
+        <h3 className="text-2xl md:text-3xl font-bold font-display leading-tight mb-2 text-slate-900 dark:text-white">
+          {title}
+        </h3>
+        
+        <p className="text-green-600 font-bold text-xl md:text-2xl mb-4">
+          {discount} <span className="text-slate-600 dark:text-slate-400 font-normal text-base">{offerText}</span>
+        </p>
+
+        <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-6 py-2.5 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 text-sm md:text-base">
+          {cta}
+        </button>
+      </div>
+    </div>
+  );
+
   return (
-    <div className='px-16 grid grid-cols-12 gap-6'>
-      <section className="w-full h-[40vh] col-span-6   bg-white relative overflow-hidden">
-        <div
-          className="w-full min-h-[300px] h-[40vh]  flex items-center px-14 py-4 mt-10 justify-end relative"
-          style={{
-            backgroundImage: bannerTemplate ? `url(${bannerTemplate})` : 'none',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        >
-          {/* Overlay for opacity */}
-          <div className="absolute inset-0 bg-white opacity-60 z-0"></div>
-          {/* Right Text Section */}
-          <div className="flex flex-col items-end z-10 text-right">
-            <h1 className="text-base md:text-xl font-bold text-gray-500 leading-snug">
-              Fresh Fruits <br /> Healthy Products
-            </h1>
-            <p className="text-sm md:text-base text-green-600 font-semibold mt-4">
-              30% off sale <span className="text-gray-500">Hurry up!!!</span>
-            </p>
-            <button className="mt-6 bg-green-500 hover:bg-green-600 text-white text-base font-medium px-2 py-1 rounded-lg shadow transition duration-200">
-              Shop now
-            </button>
-          </div>
-        </div>
-      </section>
-      <section className="w-full   h-[40vh]  col-span-6 bg-white relative overflow-hidden">
-      <div
-        className="w-full min-h-[300px] h-[40vh] flex items-center px-14 py-4 mt-10 justify-end relative"
-        style={{
-          backgroundImage: bannerTemplate2 ? `url(${bannerTemplate2})` : 'none',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        {/* Overlay for opacity */}
-        <div className="absolute inset-0 bg-white opacity-60 z-0"></div>
-        {/* Right Text Section */}
-        <div className="flex flex-col items-end z-10 text-right">
-          <h1 className="text-lg md:text-xl font-bold text-gray-500 leading-snug">
-            Fresh Fruits <br /> Healthy Products
-          </h1>
-          <p className="text-sm md:text-base text-green-600 font-semibold mt-4">
-            30% off sale <span className="text-gray-500">Hurry up!!!</span>
-          </p>
-          <button className="mt-6 bg-green-500 hover:bg-green-600 text-white text-base font-medium px-2 py-1 rounded-lg shadow transition duration-200">
-            Shop now
-          </button>
-        </div>
+    <section className="container mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <BannerCard
+          image={bannerTemplate}
+          title="Fresh Fruits Healthy Products"
+          discount="30% off sale"
+          offerText="Hurry up!!!"
+          cta="Shop now"
+        />
+        <BannerCard
+          image={bannerTemplate2}
+          title="Premium Quality Fresh"
+          discount="25% off sale"
+          offerText="Limited time!"
+          cta="Explore"
+        />
       </div>
     </section>
-    </div>
   );
 };
 

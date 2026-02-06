@@ -1,26 +1,32 @@
 import React from 'react';
 import bannerTemplate from '../assets/bannerTemplate.jpg';
+
 const BannerTemplate = () => {
   return (
-    <section className="w-full h-[70vh] px-16  bg-white relative overflow-hidden">
-      <div className="w-full min-h-[400px] h-[60vh] flex items-center px-14 py-4 mt-10 justify-end relative"
-              style={{
-                backgroundImage: bannerTemplate ? `url(${bannerTemplate})` : 'none',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }}>
-        {/* Overlay for opacity */}
-        <div className="absolute inset-0 bg-white opacity-60 z-0"></div>
-        {/* Right Text Section */}
-        <div className="flex flex-col items-end z-10 text-right">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-500 leading-snug">
-            Fresh Fruits <br /> Healthy Products
-          </h1>
-          <p className="text-xl md:text-2xl text-green-600 font-semibold mt-4">
-            30% off sale <span className="text-gray-500">Hurry up!!!</span>
+    <section className="container mx-auto px-4 py-8">
+      <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 lg:h-96 bg-slate-100 dark:bg-slate-800 flex items-center justify-end">
+        {/* Background Image */}
+        <img
+          src={bannerTemplate}
+          alt="Fresh Fruits Banner"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* Overlay Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent dark:from-slate-900/90 dark:via-slate-900/70"></div>
+
+        {/* Content */}
+        <div className="relative z-10 mr-8 md:mr-12 lg:mr-24 text-right max-w-sm">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-3 text-slate-900 dark:text-white">
+            Fresh Fruits<br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Healthy Products</span>
+          </h2>
+          
+          <p className="text-green-600 font-bold text-2xl md:text-3xl mb-6">
+            30% off sale <span className="text-slate-600 dark:text-slate-400 font-normal text-lg">Hurry up!!!</span>
           </p>
-          <button className="mt-6 bg-green-500 hover:bg-green-600 text-white text-lg font-medium px-4 py-2 rounded-lg shadow transition duration-200">
+
+          <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-8 py-3 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95">
             Shop now
           </button>
         </div>

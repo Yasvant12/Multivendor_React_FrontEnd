@@ -3,6 +3,7 @@ import { DatePicker } from 'antd';
 import React from 'react';
 import Header from './components/Header/Header';
 import HeroSection from './components/common/HeroSection';
+import CategorySection from './components/CategroySection';
 import ContentItemSection from './components/ContentItemSection';
 import image1 from './assets/1.jpg';
 import image2 from './assets/2.jpg';
@@ -37,6 +38,7 @@ function App() {
       {/* <DatePicker />; */}
       <Header/>
       <HeroSection slides={slides} />
+      <CategorySection/>
       <ContentItemSection/>
       <BannerTemplate/>
       <NewArrivalSection/>

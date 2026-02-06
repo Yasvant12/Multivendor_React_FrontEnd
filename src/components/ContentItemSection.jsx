@@ -86,30 +86,36 @@ const dealsData = [
 
 const ContentItemSection = () => {
   return (
-    <div className="px-16 py-10">
-      <h2 className="mb-0 text-[25px] font-semibold text-[#4b5966] relative inline p-0 capitalize leading-[1]  max-[991px]:text-[24px] max-[767px]:text-[22px] max-[575px]:text-[20px]">
-        Day of the <span class="text-[#5caf90]">deal</span>
-      </h2>{" "}
-      <p class="max-w-[400px] mt-[10px] text-[14px] text-[#777] leading-[18px]">
-        Don't wait. The time will never be just right.
-      </p>
-      <div className="w-full overflow-hidden">
-        <div
-          className="flex gap-3 py-4 overflow-x-auto scrollbar-hide scroll-smooth w-full"
-          style={{ WebkitOverflowScrolling: "touch" }}
-        >
-          {dealsData.map((product) => (
-            <div className="w-1/5 flex-shrink-0">
-              <ProductCard key={product.id} product={product} />
-            </div>
-          ))}
+    <section className="container mx-auto px-4 py-12 md:py-16">
+      {/* Section Header */}
+      <div className="flex items-center justify-between mb-10 gap-4 flex-wrap">
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white">
+            Day Of The <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">Deal</span>
+          </h2>
+          <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">Don't wait. The time will never be just right.</p>
+        </div>
+
+        {/* Countdown Timer */}
+        <div className="flex items-center space-x-2">
+          <span className="text-slate-600 dark:text-slate-400 text-sm font-bold">Expires in:</span>
+          <div className="flex space-x-1">
+            <div className="bg-slate-100 dark:bg-slate-800 px-3 py-2 rounded font-bold text-slate-900 dark:text-white">10</div>
+            <span className="font-bold text-slate-900 dark:text-white">:</span>
+            <div className="bg-slate-100 dark:bg-slate-800 px-3 py-2 rounded font-bold text-slate-900 dark:text-white">56</div>
+            <span className="font-bold text-slate-900 dark:text-white">:</span>
+            <div className="bg-slate-100 dark:bg-slate-800 px-3 py-2 rounded font-bold text-slate-900 dark:text-white">22</div>
+          </div>
         </div>
       </div>
-      <style>{`
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-      `}</style>
-    </div>
+
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {dealsData.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </section>
   );
 };
 
