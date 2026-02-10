@@ -87,7 +87,6 @@ const dealsData = [
 const ContentItemSection = () => {
   return (
     <section className="container mx-auto px-4 py-12 md:py-16">
-      {/* Section Header */}
       <div className="flex items-center justify-between mb-10 gap-4 flex-wrap">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white">
@@ -95,8 +94,6 @@ const ContentItemSection = () => {
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">Don't wait. The time will never be just right.</p>
         </div>
-
-        {/* Countdown Timer */}
         <div className="flex items-center space-x-2">
           <span className="text-slate-600 dark:text-slate-400 text-sm font-bold">Expires in:</span>
           <div className="flex space-x-1">
@@ -108,8 +105,6 @@ const ContentItemSection = () => {
           </div>
         </div>
       </div>
-
-      {/* Products Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
         {dealsData.map((product) => (
           <ProductCard key={product.id} product={product} />

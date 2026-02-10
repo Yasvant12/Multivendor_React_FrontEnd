@@ -5,17 +5,12 @@ import bannerTemplate2 from '../assets/2_2.1.jpg';
 const PictureBanner = () => {
   const BannerCard = ({ image, title, discount, offerText, cta }) => (
     <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 bg-slate-100 dark:bg-slate-800 flex items-center justify-end">
-      {/* Background Image */}
       <img
         src={image}
         alt={title}
         className="absolute inset-0 w-full h-full object-cover"
       />
-
-      {/* Overlay Gradient */}
       <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent dark:from-slate-900/90 dark:via-slate-900/70"></div>
-
-      {/* Content */}
       <div className="relative z-10 mr-6 md:mr-12 text-right">
         <h3 className="text-2xl md:text-3xl font-bold font-display leading-tight mb-2 text-slate-900 dark:text-white">
           {title}

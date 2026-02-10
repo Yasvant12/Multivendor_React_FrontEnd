@@ -1,27 +1,33 @@
 import React from "react";
-
+import {
+  FaTruckFast,
+  FaHeadset,
+  FaRotateLeft,
+  FaLock,
+} from "react-icons/fa6";
 const infoItems = [
   {
-    icon: "🚚",
+    icon: FaTruckFast,
     title: "Free Shipping",
     description: "Free shipping on all US order or order above $200",
   },
   {
-    icon: "📞",
+    icon: FaHeadset,
     title: "24X7 Support",
     description: "Contact us 24 hours a day, 7 days a week",
   },
   {
-    icon: "↩️",
+    icon: FaRotateLeft,
     title: "30 Days Return",
     description: "Simply return it within 30 days for an exchange",
   },
   {
-    icon: "🔒",
+    icon: FaLock,
     title: "Payment Secure",
     description: "Your payment is always secure and encrypted",
   },
 ];
+
 
 const InfoCards = () => {
   return (
@@ -33,8 +39,8 @@ const InfoCards = () => {
             className="bg-white dark:bg-slate-800 p-8 rounded-2xl text-center border-2 border-slate-100 dark:border-slate-700 hover:shadow-xl transition-all duration-300 group"
           >
             {/* Icon */}
-            <div className="text-5xl mb-4 inline-block p-3 bg-green-50 dark:bg-green-900/20 rounded-full group-hover:scale-110 transition-transform">
-              {item.icon}
+            <div className="text-5xl mb-4 inline-block p-3 bg-green-50  rounded-full group-hover:scale-110 transition-transform">
+               <item.icon className="text-4xl text-green-600 dark:text-green-500" />
             </div>
 
             {/* Title */}
