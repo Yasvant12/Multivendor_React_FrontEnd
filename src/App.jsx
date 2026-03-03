@@ -1,53 +1,19 @@
 
-import { DatePicker } from 'antd';
-import React from 'react';
-import Header from './components/Header/Header';
-import HeroSection from './components/common/HeroSection';
-import CategorySection from './components/CategroySection';
-import ContentItemSection from './components/ContentItemSection';
-import image1 from './assets/1.jpg';
-import image2 from './assets/2.jpg';
-import BannerTemplate from './components/BannerTemplate';
-import NewArrivalSection from './components/NewArrivalSection';
-import PictureBanner from './components/PictureBanner';
-import InfoCards from './components/InfoCards';
-import BlogSection from './components/BlogSection';
-import Footer from "./components/Footer"
-const slides = [
-  {
-    image: image1,
-    title: 'Biggest Deals of the Season',
-    subtitle: 'Discover exclusive offers and top products from trusted vendors.',
-    buttonText: 'Shop Now',
-    buttonLink: '/shop',
-  },
-  {
-    image: image2,
-    title: 'Start Selling With Us',
-    subtitle: 'Explore fresh & juicy fruits',
-    buttonText: 'Shop Now',
-    buttonLink: '/register-vendor',
-  },
-];
+import React from 'react'
+import { CartProvider } from './context/CartContext'
+import AppRoutes from './routes/AppRoutes'
+import Header from './components/layout/Header'
+import Footer from './components/layout/Footer'
 
-function App() {
-
+export default function App() {
   return (
-     <div className=''>
-      {/* <h1 class="text-gray-400">Hii there</h1> */}
-      {/* <DatePicker />; */}
-      <Header/>
-      <HeroSection slides={slides} />
-      <CategorySection/>
-      <ContentItemSection/>
-      <BannerTemplate/>
-      <NewArrivalSection/>
-      <PictureBanner/>
-      <InfoCards/>
-      <BlogSection/>
-      <Footer/>
-     </div>
+    <CartProvider>
+      <div className="flex flex-col min-h-screen">
+        <main className="flex-1">
+          <AppRoutes />
+        </main>
+        <Footer />
+      </div>
+    </CartProvider>
   )
 }
-
-export default App

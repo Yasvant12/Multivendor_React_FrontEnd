@@ -1,5 +1,6 @@
 import { PhoneOutlined } from "@ant-design/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { IoSearch } from "react-icons/io5";
 import { FaCartShopping } from "react-icons/fa6";
@@ -128,7 +129,7 @@ export default function Header() {
                             {["Exotic Fruits","Leafy Greens","Fresh Vegetables","Seasonal Picks","Mushrooms","Herbs & Microgreens"].map(item => (
                               <li key={item} className="flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0"></span>
-                                <a href="#" className="text-sm font-normal text-slate-600 hover:text-green-600 transition-colors">{item}</a>
+                                <Link to="/category/vegetables" className="text-sm font-normal text-slate-600 hover:text-green-600 transition-colors">{item}</Link>
                               </li>
                             ))}
                           </ul>
@@ -139,7 +140,7 @@ export default function Header() {
                             {["Milk","Cheese","Bread","Butter & Eggs","Yogurt","Paneer"].map(item => (
                               <li key={item} className="flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0"></span>
-                                <a href="#" className="text-sm font-normal text-slate-600 hover:text-green-600 transition-colors">{item}</a>
+                                <Link to="/category/dairy" className="text-sm font-normal text-slate-600 hover:text-green-600 transition-colors">{item}</Link>
                               </li>
                             ))}
                           </ul>
@@ -150,7 +151,7 @@ export default function Header() {
                             {["Soft Drinks","Chips","Cookies","Healthy Snacks","Juices","Tea & Coffee"].map(item => (
                               <li key={item} className="flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0"></span>
-                                <a href="#" className="text-sm font-normal text-slate-600 hover:text-green-600 transition-colors">{item}</a>
+                                <Link to="/category/snacks" className="text-sm font-normal text-slate-600 hover:text-green-600 transition-colors">{item}</Link>
                               </li>
                             ))}
                           </ul>
@@ -166,9 +167,9 @@ export default function Header() {
                             alt="fruits"
                             className="rounded-xl my-4 w-full h-28 object-cover shadow-md"
                           />
-                          <a href="#" className="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors w-full text-center shadow">
+                          <Link to="/category/vegetables" className="bg-green-500 hover:bg-green-600 text-white text-sm font-semibold px-6 py-2.5 rounded-full transition-colors w-full text-center shadow">
                             Shop Now
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -291,12 +292,12 @@ export default function Header() {
                         </div>
                         <h4 className="font-display font-bold text-xl mb-1">Tropical Fruit Basket</h4>
                         <p className="text-green-600 font-bold text-2xl mb-4">$35.00</p>
-                        <a
-                          href="#"
+                        <Link
+                          to="/category/fruits"
                           className="bg-green-500 hover:bg-green-600 text-white px-8 py-2 rounded-full font-bold transition-all w-full text-center"
                         >
                           Shop Now
-                        </a>
+                        </Link>
                       </div>
 
                     </div>
