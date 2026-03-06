@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../components/Header/Header'
+// import Header from '../components/Header/Header'
 import HeroSection from '../components/common/HeroSection'
 import CategorySection from '../components/CategroySection'
 import ContentItemSection from '../components/ContentItemSection'
@@ -8,7 +8,6 @@ import NewArrivalSection from '../components/NewArrivalSection'
 import PictureBanner from '../components/PictureBanner'
 import InfoCards from '../components/InfoCards'
 import BlogSection from '../components/BlogSection'
-import Footer from '../components/Footer'
 import image1 from '../assets/1.jpg'
 import image2 from '../assets/2.jpg'
 
@@ -32,7 +31,7 @@ const slides = [
 export default function Home() {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <HeroSection slides={slides} />
       <CategorySection />
       <ContentItemSection />
@@ -41,7 +40,7 @@ export default function Home() {
       <PictureBanner />
       <InfoCards />
       <BlogSection />
-      <Footer />
+
     </div>
   )
 }

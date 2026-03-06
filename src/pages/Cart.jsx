@@ -1,11 +1,11 @@
 import React from 'react'
-import { useCart, useCartActions } from '../context/CartContext'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectCartItems, selectCartTotal, removeItem, increaseQty, decreaseQty, clearCart } from '../features/cart/cartSlice'
 
 export default function Cart() {
-  const items = useCart() || []
-  const { remove, updateQty, clear } = useCartActions() || {}
-
-  const subtotal = items.reduce((s, i) => s + (i.price || 0) * (i.qty || 1), 0)
+  const items = useSelector(selectCartItems) || []
+  const total = useSelector(selectCartTotal) || 0
+  const dispatch = useDispatch()
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -19,10 +19,10 @@ export default function Cart() {
               <div className="text-sm text-slate-500">${it.price.toFixed(2)}</div>
             </div>
             <div className="flex items-center space-x-2">
-              <button onClick={() => updateQty(it.id, Math.max(1, (it.qty || 1) - 1))} className="px-3 py-1 border rounded">-</button>
-              <div>{it.qty || 1}</div>
-              <button onClick={() => updateQty(it.id, (it.qty || 1) + 1)} className="px-3 py-1 border rounded">+</button>
-              <button onClick={() => remove(it.id)} className="text-red-500 ml-4">Remove</button>
+              <button onClick={() => dispatch(decreaseQty(it.id))} className="px-3 py-1 border rounded">-</button>
+              <div>{it.quantity}</div>
+              <button onClick={() => dispatch(increaseQty(it.id))} className="px-3 py-1 border rounded">+</button>
+              <button onClick={() => dispatch(removeItem(it.id))} className="text-red-500 ml-4">Remove</button>
             </div>
           </div>
         ))}
@@ -31,10 +31,10 @@ export default function Cart() {
       <div className="mt-6 p-4 border rounded">
         <div className="flex items-center justify-between">
           <div className="font-semibold">Subtotal</div>
-          <div className="font-bold">${subtotal.toFixed(2)}</div>
+          <div className="font-bold">${total.toFixed(2)}</div>
         </div>
         <div className="mt-4 flex space-x-2">
-          <button onClick={() => clear()} className="px-4 py-2 bg-red-500 text-white rounded">Clear</button>
+          <button onClick={() => dispatch(clearCart())} className="px-4 py-2 bg-red-500 text-white rounded">Clear</button>
         </div>
       </div>
     </div>

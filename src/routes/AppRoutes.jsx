@@ -7,6 +7,9 @@ import Blog from '../pages/Blog'
 import BlogPost from '../pages/BlogPost'
 import CategoryPage from '../pages/CategoryPage'
 import ProductDetails from '../pages/ProductDetails'
+import Products from '../pages/Products'
+import Categories from '../pages/Categories'
+import Offers from '../pages/Offers'
 import CartPage from '../pages/Cart'
 import CheckoutPage from '../pages/Checkout'
 import Login from '../pages/Login'
@@ -17,8 +20,11 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/categories" element={<Categories />} />
       <Route path="/fashion" element={<Fashion />} />
       <Route path="/groceries" element={<Groceries />} />
+      <Route path="/offers" element={<Offers />} />
       <Route path="/category/:slug" element={<CategoryPage />} />
       <Route path="/product/:productSlug" element={<ProductDetails />} />
       <Route path="/cart" element={<CartPage />} />

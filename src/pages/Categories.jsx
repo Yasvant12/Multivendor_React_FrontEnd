@@ -321,11 +321,11 @@ export default function GrabitShop() {
 
       <div className="bg-white border-b border-gray-200 py-3.5">
         <div className="max-w-screen-xl mx-auto px-5 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-gray-800">Shop Page</h2>
+          <h2 className="text-xl font-bold text-gray-800">Category Page</h2>
           <div className="flex items-center gap-2 text-sm text-gray-400">
             <a href="#" className="text-green-600 hover:underline">Home</a>
             <span>›</span>
-            <span>Shop Page</span>
+            <span>Category Page</span>
           </div>
         </div>
       </div>
@@ -433,64 +433,6 @@ export default function GrabitShop() {
 
         </main>
       </div>
-
-      {/* ── FOOTER ────────────────────────────────── */}
-      <footer className="bg-gray-900 text-gray-400 pt-14 mt-10">
-        <div className="max-w-screen-xl mx-auto px-5">
-          <div className="grid grid-cols-4 gap-10 pb-10 border-b border-gray-800">
-            {/* Brand */}
-            <div>
-              <div className="text-2xl font-bold mb-4" style={{letterSpacing:"-1px"}}>
-                <span className="text-white">Grab</span><span className="text-orange-500">it</span>
-              </div>
-              <p className="text-sm text-gray-500 leading-relaxed mb-5 max-w-[220px]">
-                Grabit is the biggest market of grocery products. Get your daily needs from our store.
-              </p>
-              <div className="flex gap-2">
-                {["🤖 Android","🍎 iOS App"].map(a => (
-                  <button key={a} className="bg-gray-800 border border-gray-700 text-white text-xs font-semibold px-4 py-2 rounded hover:bg-gray-700 transition-colors">{a}</button>
-                ))}
-              </div>
-            </div>
-            {/* Category */}
-            <div>
-              <h5 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Category</h5>
-              <ul className="space-y-2.5">
-                {["Dairy & Milk","Snack & Spice","Fast Food","Juice & Drinks","Bakery","Seafood"].map(c => (
-                  <li key={c}><a href="#" className="text-sm text-gray-500 hover:text-green-500 transition-colors">{c}</a></li>
-                ))}
-              </ul>
-            </div>
-            {/* Company */}
-            <div>
-              <h5 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Company</h5>
-              <ul className="space-y-2.5">
-                {["About us","Delivery","Legal Notice","Terms & conditions","Secure payment","Contact us"].map(c => (
-                  <li key={c}><a href="#" className="text-sm text-gray-500 hover:text-green-500 transition-colors">{c}</a></li>
-                ))}
-              </ul>
-            </div>
-            {/* Contact */}
-            <div>
-              <h5 className="text-xs font-bold text-white uppercase tracking-wider mb-4">Contact</h5>
-              <ul className="space-y-3">
-                {["📍 2548 Broaddus Maple Court, KY 4783, USA","📞 +00 9876543210","✉️ example@email.com"].map(c => (
-                  <li key={c}><a href="#" className="text-sm text-gray-500 hover:text-green-500 transition-colors leading-relaxed">{c}</a></li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          {/* Bottom */}
-          <div className="flex items-center justify-between py-5 flex-wrap gap-3">
-            <p className="text-xs text-gray-600">Copyright © <a href="#" className="text-green-600 hover:underline">Grabit</a> all rights reserved.</p>
-            <div className="flex items-center gap-2">
-              {["VISA","MC","PayPal","Stripe","Amex"].map(p => (
-                <span key={p} className="bg-gray-800 border border-gray-700 text-gray-400 text-xs font-semibold px-2.5 py-1 rounded">{p}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </footer>
 
       {/* ── QUICK VIEW MODAL ──────────────────────── */}
       {quickView && <QuickViewModal product={quickView} onClose={() => setQuickView(null)}/>}

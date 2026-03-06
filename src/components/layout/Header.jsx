@@ -2,11 +2,11 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { categories } from '../../data/categories'
 // import { FaCart } from 'react-icons/fa6'
-import { useCart } from '../../context/CartContext'
+import { useSelector } from 'react-redux'
+import { selectCartCount } from '../../features/cart/cartSlice'
 
 export default function Header() {
-  const cart = useCart() || []
-  const cartCount = cart.length
+  const cartCount = useSelector(selectCartCount)
 
   return (
     <header className="sticky top-0 z-40 bg-white border-b shadow-sm">

@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { products } from '../data/products'
-import { useCartActions } from '../context/CartContext'
+import { useDispatch } from 'react-redux'
+import { addItem } from '../features/cart/cartSlice'
 import { FaHeart, FaCartShopping, FaStar } from 'react-icons/fa6'
 
 export default function ProductDetails() {
   const { productSlug } = useParams()
   const product = products.find((p) => p.slug === productSlug)
-  const { add } = useCartActions() || {}
+  const dispatch = useDispatch()
   const [qty, setQty] = useState(1)
   const [added, setAdded] = useState(false)
 
@@ -22,17 +23,17 @@ export default function ProductDetails() {
   }
 
   const handleAddToCart = () => {
-    if (add) {
-      add({
+    dispatch(
+      addItem({
         id: product.id,
         title: product.title,
         price: product.price,
         image: product.image,
-        qty,
-      })
-      setAdded(true)
-      setTimeout(() => setAdded(false), 2000)
-    }
+        quantity: qty,
+      }),
+    )
+    setAdded(true)
+    setTimeout(() => setAdded(false), 2000)
   }
 
   const discount = product.oldPrice > product.price ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100) : 0

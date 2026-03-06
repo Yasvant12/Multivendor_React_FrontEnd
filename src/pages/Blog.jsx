@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../components/Header/Header'
 import BlogCard from '../components/Blog/BlogCard'
 import BlogSidebar from '../components/Blog/BlogSidebar'
 
@@ -42,7 +41,6 @@ const samplePosts = [
 export default function Blog() {
   return (
     <div>
-      <Header />
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/4">
