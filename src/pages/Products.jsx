@@ -403,56 +403,6 @@ function RelatedProducts() {
   );
 }
 
-function Footer() {
-  return (
-    <footer className="bg-green-900 text-gray-300 pt-12 pb-6 mt-10">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
-          <div className="col-span-2 md:col-span-1">
-            <div className="text-2xl font-bold text-white mb-3">Grab<span className="text-orange-400">it</span></div>
-            <p className="text-sm leading-relaxed mb-4">Grabit is the biggest market of grocery products. Get your daily needs from our store.</p>
-            <div className="flex flex-col gap-2">
-              {["🤖 Get it on Google Play","🍎 Download on App Store"].map(label => (
-                <a key={label} href="#" className="bg-green-700 hover:bg-orange-400 text-white text-xs px-3 py-2 rounded transition-colors">{label}</a>
-              ))}
-            </div>
-          </div>
-          {[
-            { title: "Category", items: ["Dairy & Milk","Snack & Spice","Fast Food","Juice & Drinks","Bakery","Seafood"] },
-            { title: "Company", items: ["About Us","Delivery","Legal Notice","Terms & Conditions","Secure Payment","Contact Us"] },
-            { title: "Account", items: ["Sign In","View Cart","Return Policy","Become a Vendor","Affiliate Program","Payments"] },
-          ].map(col => (
-            <div key={col.title}>
-              <h4 className="text-white font-semibold mb-4 text-sm">{col.title}</h4>
-              <ul className="space-y-2">
-                {col.items.map(item => (
-                  <li key={item}><a href="#" className="text-gray-400 hover:text-orange-300 text-sm transition-colors">{item}</a></li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <div>
-            <h4 className="text-white font-semibold mb-4 text-sm">Contact</h4>
-            <div className="space-y-3 text-sm text-gray-400">
-              <div className="flex gap-2"><span>📍</span><span>2548 Broaddus Maple Court, Madisonville KY 4783, USA.</span></div>
-              <div className="flex gap-2"><span>📞</span><span>+00 9876543210</span></div>
-              <div className="flex gap-2"><span>✉</span><span>example@email.com</span></div>
-            </div>
-          </div>
-        </div>
-        <div className="border-t border-green-700 pt-5 flex flex-wrap items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">Copyright © <a href="#" className="text-orange-400">Grabit</a> — all rights reserved.</p>
-          <div className="flex items-center gap-3 text-gray-400 text-xs">
-            <span>Accepted:</span>
-            {["VISA","MC","PayPal","Stripe"].map(p => (
-              <span key={p} className="border border-gray-600 px-2 py-0.5 rounded text-xs">{p}</span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 // ---- MAIN PAGE ----
 export default function GrabitProductPage() {

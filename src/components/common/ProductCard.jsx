@@ -43,48 +43,6 @@ const StarIcon = ({ filled, half }) => (
   </svg>
 );
 
-// ---- COMPONENTS ----
-function TopBar() {
-  return (
-    <div className="bg-green-800 text-white text-xs py-2">
-      <div className="max-w-7xl mx-auto px-4 flex flex-wrap justify-between items-center gap-2">
-        <div className="flex gap-5 items-center">
-          <span>📞 +91 987 654 3210</span>
-          <span>✉ example@email.com</span>
-          <span className="hidden md:inline">World's Fastest Online Shopping Destination</span>
-        </div>
-        <div className="flex gap-4 items-center">
-          <a href="#" className="hover:text-yellow-300">Help?</a>
-          <a href="#" className="hover:text-yellow-300">Track Order?</a>
-          <select className="bg-transparent text-white outline-none cursor-pointer text-xs">
-            <option>English</option><option>Italiano</option>
-          </select>
-          <select className="bg-transparent text-white outline-none cursor-pointer text-xs">
-            <option>USD $</option><option>EUR €</option>
-          </select>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-
-
-function Breadcrumb() {
-  return (
-    <div className="bg-white border-b border-gray-200 py-3">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-        <h1 className="text-lg font-semibold text-gray-800">Product Page</h1>
-        <div className="flex items-center gap-2 text-sm text-gray-500">
-          <a href="#" className="text-green-700 hover:underline">🏠 Home</a>
-          <span>/</span>
-          <span>Product Page</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Sidebar({ activeWeightSidebar, setActiveWeightSidebar, activeColor, setActiveColor }) {
   const [tagActive, setTagActive] = useState(null);
   const [priceVal, setPriceVal] = useState(3000);
@@ -460,8 +418,6 @@ export default function GrabitProductPage() {
           <RelatedProducts />
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }
