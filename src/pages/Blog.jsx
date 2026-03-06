@@ -1,6 +1,7 @@
 import React from 'react'
 import BlogCard from '../components/Blog/BlogCard'
 import BlogSidebar from '../components/Blog/BlogSidebar'
+import Breadcrumb from './Breadcrumb'
 
 const samplePosts = [
   {
@@ -41,6 +42,7 @@ const samplePosts = [
 export default function Blog() {
   return (
     <div>
+       <Breadcrumb/>
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row gap-8">
           <div className="md:w-1/4">

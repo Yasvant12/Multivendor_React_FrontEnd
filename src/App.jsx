@@ -2,7 +2,7 @@
 import React from 'react'
 import { CartProvider } from './context/CartContext'
 import AppRoutes from './routes/AppRoutes'
-import Header from './components/Header/Header'
+import Header from './components/layout/Header'
 import Footer from './components/layout/Footer'
 
 export default function App() {
@@ -10,7 +10,7 @@ export default function App() {
     <CartProvider>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-1">
+        <main className="px-16">
           <AppRoutes />
         </main>
               <Footer />

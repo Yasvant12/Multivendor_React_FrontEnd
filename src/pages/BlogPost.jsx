@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Header from '../components/Header/Header'
+import Header from '../components/layout/Header'
 
 export default function BlogPost() {
   const { id } = useParams()

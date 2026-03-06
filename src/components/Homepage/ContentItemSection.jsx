@@ -1,14 +1,14 @@
 import React from "react";
-import ProductCard from "./common/ProductCard";
-import image1 from "../assets/product/1_1.jpg";
+import ProductCard from "../common/ProductCard";
+import image1 from "../../assets/product/1_1.jpg";
 // import image2 from "../assets/product/1_2.jpg";
-import image3 from "../assets/product/2_1.jpg";
+import image3 from "../../assets/product/2_1.jpg";
 // import image4 from "../assets/product/2_2.jpg";
-import image5 from "../assets/product/3_1.jpg";
-import image6 from "../assets/product/6_1.jpg";
-import image7 from "../assets/product/9_1.jpg";
-import image8 from "../assets/product/17_1.jpg";
-import image9 from "../assets/product/24_1.jpg";
+import image5 from "../../assets/product/3_1.jpg";
+import image6 from "../../assets/product/6_1.jpg";
+import image7 from "../../assets/product/9_1.jpg";
+import image8 from "../../assets/product/17_1.jpg";
+import image9 from "../../assets/product/24_1.jpg";
 const dealsData = [
   {
     id: 1,
@@ -86,7 +86,7 @@ const dealsData = [
 
 const ContentItemSection = () => {
   return (
-    <section className="container mx-auto px-4 py-12 md:py-16">
+    <section className=" py-12 md:py-16">
       <div className="flex items-center justify-between mb-10 gap-4 flex-wrap">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold font-display text-slate-900 dark:text-white">

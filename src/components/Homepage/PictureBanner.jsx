@@ -1,6 +1,6 @@
 import React from 'react';
-import bannerTemplate from '../assets/2_2.jpg';
-import bannerTemplate2 from '../assets/2_2.1.jpg';
+import bannerTemplate from '../../assets/2_2.jpg';
+import bannerTemplate2 from '../../assets/2_2.1.jpg';
 
 const PictureBanner = () => {
   const BannerCard = ({ image, title, discount, offerText, cta }) => (
@@ -28,7 +28,7 @@ const PictureBanner = () => {
   );
 
   return (
-    <section className="container mx-auto px-4 py-8">
+    <section className=" py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <BannerCard
           image={bannerTemplate}

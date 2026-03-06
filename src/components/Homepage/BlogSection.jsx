@@ -1,9 +1,9 @@
 import React from "react";
-import Cake from "../assets/cake.jpg";
-import Food from "../assets/food.jpg";
-import Juice from "../assets/juice.jpg";
-import RedApple from "../assets/redApple.jpg";
-import Pista from "../assets/pista.jpg";
+import Cake from "../../assets/cake.jpg";
+import Food from "../../assets/food.jpg";
+import Juice from "../../assets/juice.jpg";
+import RedApple from "../../assets/redApple.jpg";
+import Pista from "../../assets/pista.jpg";
 
 const blogPosts = [
   {
@@ -40,7 +40,7 @@ const blogPosts = [
 
 const BlogSection = () => {
   return (
-    <section className="container mx-auto px-4 py-12 md:py-16">
+    <section className="container mx-auto py-12 md:py-16">
       {/* Section Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-4">
         <div>

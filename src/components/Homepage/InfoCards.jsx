@@ -31,7 +31,7 @@ const infoItems = [
 
 const InfoCards = () => {
   return (
-    <section className="container mx-auto px-4 py-12 md:py-16">
+    <section className="py-12 md:py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {infoItems.map((item, index) => (
           <div

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Breadcrumb from "./Breadcrumb";
 
 /* ── DATA ─────────────────────────────────────────── */
 const BASE = "https://maraviyainfotech.com/projects/grabit-tailwind/grabit-tailwind/assets/img";
@@ -319,16 +320,7 @@ export default function GrabitShop() {
     <div className="bg-gray-100 min-h-screen font-sans text-gray-800" style={{fontFamily:"'Poppins',sans-serif"}}>
 
 
-      <div className="bg-white border-b border-gray-200 py-3.5">
-        <div className="max-w-screen-xl mx-auto px-5 flex items-center justify-between">
-          <h2 className="text-xl font-bold text-gray-800">Category Page</h2>
-          <div className="flex items-center gap-2 text-sm text-gray-400">
-            <a href="#" className="text-green-600 hover:underline">Home</a>
-            <span>›</span>
-            <span>Category Page</span>
-          </div>
-        </div>
-      </div>
+      <Breadcrumb/>
 
       {/* ── CATEGORY ROW — full width ─────────────── */}
       <div className="bg-white border-b border-gray-200 py-5">

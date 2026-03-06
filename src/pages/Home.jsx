@@ -1,15 +1,14 @@
-import React from 'react'
-// import Header from '../components/Header/Header'
 import HeroSection from '../components/common/HeroSection'
-import CategorySection from '../components/CategroySection'
-import ContentItemSection from '../components/ContentItemSection'
-import BannerTemplate from '../components/BannerTemplate'
-import NewArrivalSection from '../components/NewArrivalSection'
-import PictureBanner from '../components/PictureBanner'
-import InfoCards from '../components/InfoCards'
-import BlogSection from '../components/BlogSection'
+import CategorySection from '../components/Homepage/CategroySection'
+import ContentItemSection from '../components/Homepage/ContentItemSection'
+import BannerTemplate from '../components/Homepage/BannerTemplate'
+import NewArrivalSection from '../components/Homepage/NewArrivalSection'
+import PictureBanner from '../components/Homepage/PictureBanner'
+import InfoCards from '../components/Homepage/InfoCards'
+import BlogSection from '../components/Homepage/BlogSection'
 import image1 from '../assets/1.jpg'
 import image2 from '../assets/2.jpg'
+import GroceryShowcase from '../components/Homepage/Groceryshowcase'
 
 const slides = [
   {
@@ -31,7 +30,6 @@ const slides = [
 export default function Home() {
   return (
     <div>
-      {/* <Header /> */}
       <HeroSection slides={slides} />
       <CategorySection />
       <ContentItemSection />
@@ -39,8 +37,8 @@ export default function Home() {
       <NewArrivalSection />
       <PictureBanner />
       <InfoCards />
+      <GroceryShowcase/>
       <BlogSection />
-
     </div>
   )
 }

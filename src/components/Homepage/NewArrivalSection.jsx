@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import ProductCard from "./common/ProductCard";
-import image3 from "../assets/product/2_1.jpg";
-import image6 from "../assets/product/6_1.jpg";
-import image7 from "../assets/product/9_1.jpg";
-import image9 from "../assets/product/24_1.jpg";
-import image5_1 from "../assets/product/5_1.jpg";
-import { vegetableData, fruitData } from '../utils/productData';
+import ProductCard from "../common/ProductCard";
+import image3 from "../../assets/product/2_1.jpg";
+import image6 from "../../assets/product/6_1.jpg";
+import image7 from "../../assets/product/9_1.jpg";
+import image9 from "../../assets/product/24_1.jpg";
+import image5_1 from "../../assets/product/5_1.jpg";
+import { vegetableData, fruitData } from '../../utils/productData';
 
 const allProducts = [
   {
@@ -83,7 +83,7 @@ const NewArrivalSection = () => {
   }
 
   return (
-    <section className="container mx-auto px-4 py-12 md:py-16">
+    <section className="py-12 md:py-16">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-10 gap-4">
         <div>

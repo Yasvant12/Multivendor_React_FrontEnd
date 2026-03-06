@@ -1,9 +1,9 @@
 import React from 'react';
-import bannerTemplate from '../assets/bannerTemplate.jpg';
+import bannerTemplate from '../../assets/bannerTemplate.jpg';
 
 const BannerTemplate = () => {
   return (
-    <section className="container mx-auto px-4 py-8">
+    <section className=" mx-auto py-8">
       <div className="relative rounded-3xl overflow-hidden h-72 md:h-80 lg:h-96 bg-slate-100 dark:bg-slate-800 flex items-center justify-end">
         {/* Background Image */}
         <img

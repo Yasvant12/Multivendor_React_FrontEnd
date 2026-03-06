@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../components/Header/Header'
+import Header from '../components/layout/Header'
 
 export default function Fashion() {
   const [items, setItems] = useState([])

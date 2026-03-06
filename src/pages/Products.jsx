@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Breadcrumb from "./Breadcrumb";
 
 const IMAGES = [
   "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?w=600&h=450&fit=crop",
@@ -44,20 +45,7 @@ const StarIcon = ({ filled, half }) => (
 );
 
 
-function Breadcrumb() {
-  return (
-    <div className="bg-white border-b border-gray-200 py-3">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-        <h1 className="text-lg font-semibold text-gray-800">Product Page</h1>
-        <div className="flex items-center gap-2 text-sm text-gray-500">
-          <a href="#" className="text-green-700 hover:underline">🏠 Home</a>
-          <span>/</span>
-          <span>Product Page</span>
-        </div>
-      </div>
-    </div>
-  );
-}
+
 
 function Sidebar({ activeWeightSidebar, setActiveWeightSidebar, activeColor, setActiveColor }) {
   const [tagActive, setTagActive] = useState(null);
